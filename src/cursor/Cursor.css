@@ -1,0 +1,19 @@
+.app-cursor {
+    z-index: 1000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(251, 218, 79);
+    pointer-events: none;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    position: fixed;
+}
+
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .app-cursor {
+      -webkit-backdrop-filter: blur(02px);
+      backdrop-filter: blur(02px);
+      background-color: rgba(255, 255, 255, 0.394);  
+    }
+  }
