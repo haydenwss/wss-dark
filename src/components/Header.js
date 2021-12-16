@@ -18,11 +18,11 @@ const Header = () => {
         <>
             <nav>
                 <div className="navbar-container">
-                    <ul>
+       
                         <Link to="/"  onClick={closeMobileMenu}>
                             <img data-aos="fade-in" className='just-navbar-logo' src='/images/white-transparent.png' alt='avatar' />
                         </Link>
-                    </ul>
+                    
                     <div data-aos="fade-in" className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>

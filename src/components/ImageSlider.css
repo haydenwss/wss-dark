@@ -7,7 +7,19 @@
     margin: 0 auto;
     border-radius: 20px;
     box-shadow:  20px 20px 60px #1b1b1b;
+    max-height: 600px;
 }
+
+@media only screen and (max-width: 1200px) {
+    .hero--section {
+      height: 600px;
+      margin: 0 auto;
+      margin-bottom: 100px;
+      width: 95%;
+    }
+  }
+
+
 
 .hero--wrapper {
     width: 100%;
@@ -60,6 +72,12 @@
     flex-direction: column;
 }
 
+@media only screen and (max-width: 1200px) {
+    .hero--section {
+      height: 550px;
+    }
+  }
+
 .hero--buttons {
     position: absolute;
     bottom: 50px;
@@ -96,13 +114,7 @@ home--button {
     z-index: 1;
     color: white;
 }
-.title {
-    font-size: 40px;
-    font-weight: 200;
-    text-transform: uppercase;
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.637);
-    margin-bottom: 0.8rem;
-}
+
 
 .hero--image {
     position: absolute;

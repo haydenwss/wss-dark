@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import WhatWeDo from '../components/WhatWeDo';
 import { motion } from 'framer-motion';
 import ImageSlider from '../components/ImageSlider';
+import RespWhatWeDo from '../components/RespWhatWeDo';
 
 const Index = () => {
 
@@ -29,7 +30,8 @@ const Index = () => {
       };
     
     return (
-        <motion.div
+
+          <motion.div
           initial="initial"
           animate="in"
           exit="out"
@@ -39,9 +41,13 @@ const Index = () => {
         >
             <Hero />
             <WhatWeDo />
+            <RespWhatWeDo />
             <ImageSlider />
         </motion.div>
+ 
     )
 }
 
 export default Index
+
+

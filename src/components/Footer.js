@@ -21,7 +21,10 @@ const Footer = () => {
                 <Link to='/contact'><p>Contact</p></Link>
             </FooterGroup>
         
-            <p>Copyright <i className="far fa-copyright"></i> 2021 Web Suite Studio. All Rights Reserved.</p>
+            <CopyContainer>
+                <p>Copyright <i className="far fa-copyright"></i> 2021 Web Suite Studio. All Rights Reserved.</p>
+            </CopyContainer>
+            
         </FooterContainer>
     )
 }
@@ -41,6 +44,21 @@ const FooterContainer = styled.div`
     grid-template-columns: repeat(3, auto);
     align-items: center;
     justify-items: center; 
+
+    @media only screen and (max-width: 1200px) {
+      display: inline-block;
+      width: 100vw;
+      height: auto;
+      padding-top: 200px;
+  }
+
+`
+
+
+const CopyContainer = styled.div`
+     @media only screen and (max-width: 1200px) {
+            text-align: center;
+        }
 `
 
 const FooterGroup = styled.div`
@@ -51,6 +69,11 @@ const FooterGroup = styled.div`
 
     img {
         height: 100px;
+
+        @media only screen and (max-width: 1200px) {
+            width: 80%;
+            height: auto;
+        }
     }
     
     p {

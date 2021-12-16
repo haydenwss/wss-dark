@@ -57,6 +57,12 @@ const ProcessHeroContainer = styled.div`
     background-position: center;
     position: relative;
     margin: 0;
+
+    @media only screen and (max-width: 1200px) {
+      display: inline-block;
+      width: 100vw;
+      min-height: 50vh;
+  }
 `
 
 const SubHeader = styled.div`
@@ -64,6 +70,10 @@ const SubHeader = styled.div`
     text-align: center;
     align-items: center;
     justify-items: center; 
+
+    @media only screen and (max-width: 1200px) {
+      display: inline-block;
+  }
 
 `
 
@@ -75,6 +85,12 @@ const ProcessHeroGroup = styled.div`
 
     img {
         height: 500px;
+
+        @media only screen and (max-width: 1200px) {
+            display: inline-block;
+            width: 80%;
+            height: auto;
+        }
     }
     
     h1 {
@@ -83,5 +99,8 @@ const ProcessHeroGroup = styled.div`
         font-weight: 900;
         line-height: 1.5;
         
+        @media only screen and (max-width: 1200px) {
+            font-size: 40px;
+        }
     }
 `

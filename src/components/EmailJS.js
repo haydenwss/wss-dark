@@ -98,9 +98,16 @@ export default EmailJS;
 
 const FormWrapper = styled.div `
     max-width: 500px;
-    margin: auto;
     height: 100vh;
     min-height: 700px;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 1200px) {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+      }
 `
 
 const HeroWrapper = styled.div `
@@ -112,6 +119,18 @@ const HeroWrapper = styled.div `
     justify-content: center;
     margin: 0 auto;
 
+    @media only screen and (max-width: 1200px) {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        text-align: center;
+        align-items: center;
+        justify-items: center; 
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0px;
+      }
+
     @media (max-width: 780px) {
       grid-template-columns: 1fr;
       justify-items: center;
@@ -122,6 +141,8 @@ const TextWrapper = styled.div `
     position: relative;
     display: grid;
     gap: 20px;
+
+
 
     input, textarea, .month-input {
       border-radius: 5px;
@@ -135,6 +156,8 @@ const TextWrapper = styled.div `
       border-color: white;
       box-shadow:  20px 20px 60px #1b1b1b,
              -20px -20px 60px #252525;
+
+      
       
       font-family: 'Archivo Black', sans-serif;
 
@@ -219,6 +242,16 @@ const FormContainer = styled.div `
   border-radius: 15px;
 
   background-color: transparent;
+
+  @media only screen and (max-width: 1200px) {
+            display: inline-block;
+            width: auto;
+            height: auto;
+            margin: 0 auto;
+            padding: 0px;
+            border-style: none;
+            margin-top: 50px;
+        }
   
 
   select {

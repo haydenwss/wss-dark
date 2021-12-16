@@ -60,7 +60,7 @@ const ImageSlider = () => {
                                  
                                         <div className='hero--overlay'>
                                             <div className='hero--content'> 
-                                                <h1 className='title'>{slide.title}</h1>                       
+                                                <Title>{slide.title}</Title>                       
                                             </div>
                                         </div>
                                 </div>
@@ -99,7 +99,7 @@ const HeroButtons = styled.div`
           }
     :active {
         color: white;
-    }
+        }
     }
 `
 
@@ -115,9 +115,32 @@ const Logo = styled.div`
         margin: 20px;
         width: 200px;
         z-index: 1;
+
+        @media only screen and (max-width: 1200px) {
+            display: none;
+        }
     }
+`
+
+const Title = styled.div`
+    font-size: 40px;
+    font-weight: 200;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.637);
+    margin-bottom: 0.8rem;
+
+@media only screen and (max-width: 1200px) {
+  
+      font-size: 20px;
+    
+  }
+
 `
 
 const SliderContainer = styled.div`
     padding-top: 200px;
+
+    @media only screen and (max-width: 1200px) {
+      padding-top: 100px;
+    }
 `

@@ -83,10 +83,13 @@ const HeroContainer = styled.div`
     background-color: rgb(32, 32, 32);
     color: rgb(251, 218, 79);
     min-height: 100vh;
-    background-size: cover;
-    background-position: center;
     position: relative;
     margin: 0;
+
+    @media only screen and (max-width: 1200px) {
+      display: inline-block;
+      width: 100vw;
+  }
 `
 
 const SubHeader = styled.div`
@@ -96,6 +99,10 @@ const SubHeader = styled.div`
     grid-gap: 20px;
     align-items: center;
     justify-items: center; 
+
+    @media only screen and (max-width: 1200px) {
+      display: inline-block;
+  }
 
 `
 
@@ -107,6 +114,12 @@ const HeroGroup = styled.div`
 
     img {
         height: 500px;
+
+        @media only screen and (max-width: 1200px) {
+            display: inline-block;
+            width: 80%;
+            height: auto;
+  }
     }
     
     p {
