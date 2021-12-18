@@ -63,7 +63,7 @@ export default Process
 const ProcessContainer = styled.div`
     background-color: rgb(32, 32, 32);
     color: rgb(251, 218, 79);
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     margin: 0 auto;
     max-width: 1500px;
@@ -87,6 +87,7 @@ const ProcessGroup = styled.div`
     position: relative;
     padding: 0px 60px 60px 60px;
     display: grid;
+    grid-gap: 60px;
     grid-template-columns: repeat(2, auto);
     align-items: center;
     justify-items: center; 
@@ -105,22 +106,20 @@ const Box = styled.div`
     color: rgb(251, 218, 79);
     height: 400px;
     width: 100%;
-    padding: 20px;
     border-radius: 20px;
     border-color: rgb(251, 218, 79);
     border-style: solid;
     border-width: 1px;
     text-align: center;
     padding-top: 50px;
-    box-shadow:  20px 20px 60px #1b1b1b,
-             -20px -20px 60px #252525;
+  
 
     @media only screen and (max-width: 1200px) {
         display: inline-block;
         height: auto;
-        width: auto;
+        width: 100%;
         margin-top: 20px;
-        padding: 10px;
+       
     }
 
     .no-display {
