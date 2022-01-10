@@ -15,7 +15,7 @@ const Process = () => {
                         <ProcessGroup>
             <Box data-aos="fade-right">
                 <BoxText>
-                    <Title>FROM CONCEPT, TO PRODUCTION</Title>
+                    <Title>FROM CONCEPT TO PRODUCTION</Title>
                     <p>We utilizes web development technologies that are both proven and practical. With the options available in the market today, we can help you determine what is best for your needs.</p>
                     <p>To make the web development process easier for you we help our clients choose the right tools for hosting, e-commerce, content management and marketing.</p>
                     <p>We start our projects by understanding the scope and requirements. This is accomplished by working closely with you to make sure we are all on the same page.</p>
@@ -23,13 +23,13 @@ const Process = () => {
                 </BoxText>
             </Box>
             <Box data-aos="fade-left">
-                <img className='no-display' src='images/design.svg' alt='' />
+                <img className='no-display' src='images/mobile.svg' alt='' />
             </Box>
         </ProcessGroup>
 
         <ProcessGroup>
             <Box data-aos="fade-right">
-                <img src='images/responsive.svg' alt='' />
+                <img src='images/wireframe.svg' alt='' />
             </Box>
             <Box data-aos="fade-left">
                 <BoxText>
@@ -40,18 +40,46 @@ const Process = () => {
             </Box>
         </ProcessGroup>
 
+        <ProcessGroup>
+            <Box data-aos="fade-right">
+                <Title>Areas of expertise</Title>
+                <ListItems>
+                    <p>Discovery</p>
+                    <p>UX Planning</p>
+                    <p>Sitemapping</p>
+                    <p>Website Design</p>
+
+                    <p>Content Writing</p>
+                    <p>Web Hosting</p>
+                    <p>E-commerce</p>
+                    <p>Web Development</p>
+
+                    <p>UI Design</p>
+                    <p>Webflow</p>
+                    <p>Database Management</p>
+                    <p>Graphic Design</p>
+                </ListItems>
+            </Box>
+            <Box data-aos="fade-left">
+                <BoxText>
+                    <img src='images/dev-team.svg' alt='' />
+                </BoxText>
+            </Box>
+        </ProcessGroup>
+
         
             <ProcessGroup>  
+            <Box data-aos="fade-left">
+                    <img src='images/screens.svg' alt='' />
+                </Box>
                 <Box data-aos="fade-right">
                     <BoxText>
-                        <h1>Ready to get a project started?</h1>
+                        <Title>Ready to start a project?</Title>
                         <h3>get a free quote today!</h3>
                         <Link to='/contact'><button>get quote</button></Link>
                     </BoxText>
                 </Box>
-                <Box data-aos="fade-left">
-                    <img src='images/screens.svg' alt='' />
-                </Box>
+                
             </ProcessGroup>
          
         </ProcessContainer>
@@ -104,15 +132,15 @@ const ProcessGroup = styled.div`
 const Box = styled.div`
     background-color: transparent;
     color: rgb(251, 218, 79);
-    height: 400px;
+    min-height: 300px;
     width: 100%;
     border-radius: 20px;
-    border-color: rgb(251, 218, 79);
+    border-color: transparent;
+    box-shadow:  20px 20px 60px #1b1b1b;
     border-style: solid;
     border-width: 1px;
     text-align: center;
-    padding-top: 50px;
-  
+    padding: 20px;
 
     @media only screen and (max-width: 1200px) {
         display: inline-block;
@@ -166,11 +194,26 @@ const Box = styled.div`
     }
 `
 
+const ListItems = styled.div`
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    justify-items: center; 
+    padding: 20px;
+
+    @media only screen and (max-width: 1200px) {
+        padding: 10px;
+        grid-gap: 5px;
+    }
+`
+
 const Title = styled.div `
     color: rgb(251, 218, 79);
     font-size: 30px;
     font-weight: 900;
     letter-spacing: 1.4px;
+    text-transform: uppercase;
 `
 const BoxText = styled.div`
     padding: 20px 50px;
