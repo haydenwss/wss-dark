@@ -20,7 +20,7 @@ const Header = () => {
                 <div className="navbar-container">
        
                         <Link to="/"  onClick={closeMobileMenu}>
-                            <img data-aos="fade-in" className='just-navbar-logo' src='/images/white-transparent.png' alt='avatar' />
+                            <img data-aos="fade-in" className='just-navbar-logo' src='/images/inverse-new-logo.png' alt='avatar' />
                         </Link>
                     
                     <div data-aos="fade-in" className='menu-icon' onClick={handleClick}>

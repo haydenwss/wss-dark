@@ -22,15 +22,15 @@ const Process = () => {
                     <p>Following the initial kick-off meeting, we will outline your project, create milestones, and agree on project priorities. Now we have a strategic plan in place that aligns with your initial vision and makes your goals achievable.</p>
                 </BoxText>
             </Box>
-            <Box data-aos="fade-left">
-                <img className='no-display' src='images/mobile.svg' alt='' />
-            </Box>
+            <ImageBox data-aos="fade-left">
+                <img className='no-display' src='https://images.unsplash.com/photo-1538121915146-1dedb4191b21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80' alt='' />
+            </ImageBox>
         </ProcessGroup>
 
         <ProcessGroup>
-            <Box data-aos="fade-right">
-                <img src='images/wireframe.svg' alt='' />
-            </Box>
+            <ImageBox data-aos="fade-right">
+                <img src='https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' alt='' />
+            </ImageBox>
             <Box data-aos="fade-left">
                 <BoxText>
                     <Title>LOW & HIGH FIDELITY RENDER</Title>
@@ -39,39 +39,9 @@ const Process = () => {
                 </BoxText>
             </Box>
         </ProcessGroup>
-
-        <ProcessGroup>
-            <Box data-aos="fade-right">
-                <Title>Areas of expertise</Title>
-                <ListItems>
-                    <p>Discovery</p>
-                    <p>UX Planning</p>
-                    <p>Sitemapping</p>
-                    <p>Website Design</p>
-
-                    <p>Content Writing</p>
-                    <p>Web Hosting</p>
-                    <p>E-commerce</p>
-                    <p>Web Development</p>
-
-                    <p>UI Design</p>
-                    <p>Webflow</p>
-                    <p>Database Management</p>
-                    <p>Graphic Design</p>
-                </ListItems>
-            </Box>
-            <Box data-aos="fade-left">
-                <BoxText>
-                    <img src='images/dev-team.svg' alt='' />
-                </BoxText>
-            </Box>
-        </ProcessGroup>
-
         
             <ProcessGroup>  
-            <Box data-aos="fade-left">
-                    <img src='images/screens.svg' alt='' />
-                </Box>
+            
                 <Box data-aos="fade-right">
                     <BoxText>
                         <Title>Ready to start a project?</Title>
@@ -79,6 +49,9 @@ const Process = () => {
                         <Link to='/contact'><button>get quote</button></Link>
                     </BoxText>
                 </Box>
+                <ImageBox data-aos="fade-left">
+                    <img src='https://images.unsplash.com/photo-1504237111663-37d6094bec09?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80' alt='' />
+                </ImageBox>
                 
             </ProcessGroup>
          
@@ -89,12 +62,13 @@ const Process = () => {
 export default Process
 
 const ProcessContainer = styled.div`
-    background-color: rgb(32, 32, 32);
+    background-color: white;
     color: rgb(251, 218, 79);
     min-height: 100vh;
     position: relative;
     margin: 0 auto;
     max-width: 1500px;
+    margin-bottom: 200px;
 
     @media only screen and (max-width: 1200px) {
         display: grid;
@@ -102,118 +76,121 @@ const ProcessContainer = styled.div`
         align-items: center;
         justify-items: center;
         margin: 0 auto;
-        padding: 20px;
         height: auto;
     }
 `
 
 const ProcessGroup = styled.div`
-    background-color: rgb(32, 32, 32);
+    background-color: white;
     color: rgb(251, 218, 79);
     background-size: cover;
     background-position: center;
     position: relative;
-    padding: 0px 60px 60px 60px;
+    padding-bottom: 20px;
     display: grid;
-    grid-gap: 60px;
-    grid-template-columns: repeat(2, auto);
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 50%);
     align-items: center;
     justify-items: center; 
 
     @media only screen and (max-width: 1200px) {
             display: inline-block;
-            width: 100%;
-            padding: 0px;
-            
+    }
+`
+
+const ImageBox = styled.div`
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    padding: 0px;
+    overflow: hidden;
+
+    border-color: rgb(122, 142, 142);
+    border-style: solid;
+    border-width: 1px;
+
+    @media only screen and (max-width: 1200px) {
+        display: inline-block;
+        border-color: white;   
+    }
+
+    img {
+        min-width: 100%; /* or any custom size */
+        height: 100%; 
+        object-fit: cover;
+
+        @media only screen and (max-width: 1200px) {
+            width: 80%;
+            height: auto;
+        }
     }
 `
 
 
 const Box = styled.div`
     background-color: transparent;
-    color: rgb(251, 218, 79);
-    min-height: 300px;
+    color: black;
+    min-height: 400px;
     width: 100%;
-    border-radius: 20px;
-    border-color: transparent;
-    box-shadow:  20px 20px 60px #1b1b1b;
+   
+    border-color: rgb(122, 142, 142);
     border-style: solid;
     border-width: 1px;
-    text-align: center;
-    padding: 20px;
+    
+    display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
 
-    @media only screen and (max-width: 1200px) {
-        display: inline-block;
-        height: auto;
-        width: 100%;
-        margin-top: 20px;
-       
+  @media only screen and (max-width: 1200px) {
+        border-color: white; 
     }
+
 
     .no-display {
     @media only screen and (max-width: 1200px) {
         display: none;
+        
     }
 }
     
         
 
-    img {
-        width: 400px;
-        margin: 0px 20px;
-        border-radius: 20px;
-
-        @media only screen and (max-width: 1200px) {
-            width: 80%;
-            height: auto;
-            
-        }
-
-       
-    }
+    
 
     button {
       width: 60%;
       border-style: solid;
-      border-color: rgb(251, 218, 79);
+      border-color: rgb(122, 142, 142);
       border-width: 1px;
-      border-radius: 5px;
+
       background-color: transparent;
       padding: 5px 10px;
       text-transform: uppercase;
-      color: rgb(251, 218, 79);
+      color: rgb(122, 142, 142);
       margin: 20px;
-      box-shadow:  4px 5px 20px rgb(32, 32, 32);
+      
 
       :hover {
             transform: translateY(-3px) scale(1.2);
             transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-            background-color: rgb(32, 32, 32);
+            background-color: rgb(122, 142, 142);
             color: white;
+            box-shadow:  2px 2px 20px rgb(32, 32, 32);
           }
     }
 `
 
-const ListItems = styled.div`
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(4, auto);
-    align-items: center;
-    justify-items: center; 
-    padding: 20px;
 
-    @media only screen and (max-width: 1200px) {
-        padding: 10px;
-        grid-gap: 5px;
-    }
-`
 
 const Title = styled.div `
-    color: rgb(251, 218, 79);
+    color: rgb(122, 142, 142);
     font-size: 30px;
     font-weight: 900;
     letter-spacing: 1.4px;
     text-transform: uppercase;
+    font-family: "Roseritta";
 `
 const BoxText = styled.div`
     padding: 20px 50px;

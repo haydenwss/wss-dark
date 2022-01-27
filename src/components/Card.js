@@ -9,7 +9,7 @@ const Card = () => {
         <Wrapper>
             <ImageWrapper>
                 <h1>Contact</h1>
-              <img data-aos-delay="400" data-aos="fade-down" src='images/email.svg' alt='' />
+              <img data-aos-delay="400" data-aos="fade-down" src='https://images.unsplash.com/photo-1586880244406-556ebe35f282?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80' alt='' />
             </ImageWrapper>
         </Wrapper>
     )
@@ -18,13 +18,19 @@ const Card = () => {
 export default Card
 
 const Wrapper = styled.div `
-    width: 360px;
+    min-width: 400px;
     min-height: 550px;
-    border-radius: 15px;
+    max-height: 800px;
+    color: white;
     display: relative;
-    padding: 20px;
+    padding: 8px 10px;
+
+    h1 {
+        font-size: 40px;
+        font-family: "Roseritta";
+    }
     
-    background-color: #fbda4f;
+    background-color: rgb(122, 142, 142);
     @media only screen and (max-width: 1200px) {
         display: grid;
         grid-template-columns: repeat(1, auto);
@@ -34,7 +40,8 @@ const Wrapper = styled.div `
         width: 90%;
         height: auto;
         margin: 0 auto;
-        padding: 0px;
+        padding: 10px;
+        margin-top: 50px;
     }
 
 `
@@ -42,11 +49,13 @@ const Wrapper = styled.div `
 const ImageWrapper = styled.div `
     width: 100%;
     height: auto;
-    padding: 140px 40px;
+    padding:  0px;
+    text-align: center;
 
     img {
-        width: 80%;
-        height: auto;
+        min-width: 100%; /* or any custom size */
+        height: 100%; 
+        object-fit: cover;
         
     }
 `

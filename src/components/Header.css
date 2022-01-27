@@ -1,5 +1,5 @@
 .navbar--only {
-    height: 80px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,19 +11,19 @@
   }
   
     .navbar-container {
-      background-color: rgb(32, 32, 32);
+      background-color: rgb(255, 255, 255);
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 80px;
+      height: 40px;
       padding: 10px;
     }
     
     .just-navbar-logo {
-      color: rgb(251, 218, 79);
+      color: rgb(122, 142, 142);
       cursor: pointer;
       text-decoration: none;
-      height: 30px;
+      height: 80px;
       align-items: center;
 
 
@@ -36,7 +36,7 @@
     }
     
     .home-icon, a {
-      color: rgb(251, 218, 79);
+      color: rgb(122, 142, 142);
     }
 
     .home-icon {
@@ -58,7 +58,7 @@
     }
     
     .nav-links {
-      color: rgb(251, 218, 79);
+      color: rgb(122, 142, 142);
       display: flex;
       align-items: center;
       text-decoration: none;

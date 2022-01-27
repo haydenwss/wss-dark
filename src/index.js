@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import './fonts/Roseritta.ttf'; 
+import './fonts/made-saonara.otf'; 
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

@@ -52,11 +52,11 @@ const BoxContainer = styled.div`
 const CellGroup = styled.div`
     width: 300px;
     height: 400px;
-    background-color: #fbda4f;
+    background-color: rgb(122, 142, 142);
     color: rgb(32, 32, 32);
     border-radius: 20px;
-   text-align: center;
-   padding: 80px 10px 0px 10px;
+    text-align: center;
+    padding: 80px 10px 0px 10px;
 
    @media only screen and (max-width: 1300px) {
       width: 250px;
@@ -83,7 +83,12 @@ const CellImage = styled.div`
 
 const CellTitle = styled.div`
     font-size: 15px;
-    padding: 30px 0;
+    padding: 30px;
     margin: 20px;
     letter-spacing: 1.2px;
+
+    @media only screen and (max-width: 900px) {
+      font-size: 12px;
+      line-height: 18px;
+  }
 `

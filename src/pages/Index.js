@@ -1,9 +1,10 @@
 import React from 'react'
-import Hero from '../components/Hero';
+
 import WhatWeDo from '../components/WhatWeDo';
 import { motion } from 'framer-motion';
 import ImageSlider from '../components/ImageSlider';
 import RespWhatWeDo from '../components/RespWhatWeDo';
+import LightHero from '../components/LightHero';
 
 const Index = () => {
 
@@ -38,11 +39,12 @@ const Index = () => {
           variants={pageVariants}
           transition={pageTransition}
             
-        >
-            <Hero />
+        > 
+
+            <LightHero />
             <WhatWeDo />
             <RespWhatWeDo />
-            <ImageSlider />
+            <ImageSlider /> 
         </motion.div>
  
     )

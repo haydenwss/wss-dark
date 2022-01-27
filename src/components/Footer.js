@@ -7,7 +7,7 @@ const Footer = () => {
         <FooterContainer>
             <FooterGroup>
                 <Link to='/'>
-                    <img src='/images/white-transparent.png' alt='Footer logo' />
+                    <img src='/images/inverse-new-logo.png' alt='Footer logo' />
                 </Link>
             </FooterGroup>
             <FooterGroup>
@@ -32,13 +32,15 @@ const Footer = () => {
 export default Footer
 
 const FooterContainer = styled.div`
-    background-color: rgb(32, 32, 32);
-    color: rgb(251, 218, 79);
-    min-height: 100vh;
+    background-color: white;
+    color: rgb(122, 142, 142);
+    min-height: 50vh;
     background-size: cover;
     background-position: center;
     position: relative;
     margin: 0;
+    border-top: 1px solid rgb(122, 142, 142);
+
 
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -68,16 +70,16 @@ const FooterGroup = styled.div`
     text-align: center;
 
     img {
-        height: 100px;
+        height: 200px;
 
         @media only screen and (max-width: 1200px) {
-            width: 80%;
+            width: 30%;
             height: auto;
         }
     }
     
     p {
-        color: white;
+        color: rgb(122, 142, 142);
         font-size: 15px;
         line-height: 1.5;
         

@@ -104,7 +104,7 @@ const FormWrapper = styled.div `
 
     @media only screen and (max-width: 1200px) {
             display: inline-block;
-            width: 100%;
+            width: 100vw;
             height: auto;
             margin: 0 auto;
       }
@@ -118,14 +118,14 @@ const HeroWrapper = styled.div `
     padding: 120px 20px 0px;
     justify-content: center;
     margin: 0 auto;
+    
+    
 
     @media only screen and (max-width: 1200px) {
         display: grid;
         grid-template-columns: repeat(1, auto);
         text-align: center;
-        align-items: center;
-        justify-items: center; 
-        width: 90%;
+        width: 100%;
         height: auto;
         margin: 0 auto;
         padding: 0px;
@@ -139,23 +139,24 @@ const HeroWrapper = styled.div `
 
 const TextWrapper = styled.div `
     position: relative;
-    display: grid;
-    gap: 20px;
+    min-width: 400px;
 
-
+    @media only screen and (max-width: 1200px) {
+            height: 100vh;
+        }
+    
 
     input, textarea, .month-input {
-      border-radius: 5px;
+
       padding: 5px;
-      width: 90%;
-      margin: auto;
-      background-color: #cecece;
+      width: 80%;
+      background-color: white;
       color: black;
       border-style: solid;
       border-width: 1px;
-      border-color: white;
-      box-shadow:  20px 20px 60px #1b1b1b,
-             -20px -20px 60px #252525;
+      border-color: black;
+      
+      margin: 20px 0px;
 
       
       
@@ -170,42 +171,40 @@ const TextWrapper = styled.div `
           
 
       ::placeholder { /* Firefox, Chrome, Opera */
-        color: white;
+        color: black;
       }
       :-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: white;
+        color: black;
       }
       ::-ms-input-placeholder { /* Microsoft Edge */
-        color: white;
+        color: black;
       }
     }
 
     .submit-button {
-      width: 95%;
+      width: 83%;
       border-style: solid;
-      border-color: white;
+      border-color: black;
       border-width: 1px;
-      border-radius: 5px;
-      background-color: transparent;
+      background-color: white;
       padding: 5px 10px;
-      color: white;
-      box-shadow:  20px 20px 60px #1b1b1b,
-             -20px -20px 60px #252525;
+      color: black;
+   
 
 
       :hover {
             transform: translateY(-3px) scale(1.1);
             transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-            background-color: rgb(251, 218, 79);
             color: rgb(32, 32, 32);
             border-color: rgb(32, 32, 32);
+            box-shadow:  2px 2px 10px #1b1b1b;
           }
       
     }
 `
 
 const InputContainer = styled.h1 `
-    margin-top: 25px;
+    margin: 0px;
 `
 
 
@@ -216,32 +215,30 @@ const Title = styled.h1 `
     font-weight: bold;
     font-size: 30px;
     line-height: 72px;
-    color: white;
+    color: black;
     mix-blend-mode: normal;
     text-shadow: 0px 20px 40px rgba(0,0,0,0.3);
+    font-family: "Roseritta";
+    text-transform: lowercase;
 `
 
 const Caption = styled.p `
   font-size: 15px;
-  font-style: normal;
-  line-height: 130%;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
+  color: black;
 `
 
 const FormContainer = styled.div `
   width: 100%;
-  color: white;
-  padding: 20px;
-
-  min-height: 550px;
-  border-color: white;
+  height: 100%;
+  max-height: 800px;
   border-style: solid;
   border-width: 1px;
   text-align: center;
-  border-radius: 15px;
-
-  background-color: transparent;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    align-items: center;
+    border-color: rgb(122, 142, 142);
 
   @media only screen and (max-width: 1200px) {
             display: inline-block;
@@ -259,8 +256,7 @@ const FormContainer = styled.div `
     background-color: transparent;
     padding: 5px;
     border-color: white;
-    margin: 2px;
-    color: white;
+    color: black;
     
 
       :hover {

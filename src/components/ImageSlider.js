@@ -4,6 +4,8 @@ import sliderdata from '../data/sliderdata';
 import styled from 'styled-components';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
+
 
 const ImageSlider = () => {
 
@@ -46,6 +48,8 @@ const ImageSlider = () => {
     
      return (
         <SliderContainer data-aos="fade-down">
+            <InnerContainer>
+
             <div className='hero--section'>
                 <div className='hero--wrapper'>
                     {sliderdata.map((slide, index) => {
@@ -54,26 +58,53 @@ const ImageSlider = () => {
                                 {index === current && (
                                     <div className='hero--slider'>
                                     <img className='hero--image' src={slide.image} alt={slide.alt} />
-                                    <Logo>
-                                        <img data-aos-delay="2000" src='images/white-transparent.png' alt={slide.alt} />
-                                    </Logo>
-                                 
-                                        <div className='hero--overlay'>
-                                            <div className='hero--content'> 
-                                                <Title>{slide.title}</Title>                       
-                                            </div>
-                                        </div>
+                                  
                                 </div>
+                                
                                 )}
+                                
                             </div>
+                            
                         )
                     })}
+                    
                     <HeroButtons>
-                        <button  onClick={prevSilde}><i className="fas fa-arrow-circle-left fa-3x"></i></button>
-                        <button   onClick={nextSlide}><i className="fas fa-arrow-circle-right fa-3x"></i></button>
+                        <button  onClick={prevSilde}><i className="fas fa-long-arrow-alt-left fa-2x"></i></button>
+                        <button   onClick={nextSlide}><i class="fas fa-long-arrow-alt-right fa-2x"></i></button>
                     </HeroButtons>
                 </div>
             </div>
+            
+            <TextContnent>
+                <h1>AREAS OF EXPERTISE</h1>
+                <Pcontent>
+                    <p>discovery</p>
+                    <p>UX Planning</p>
+                </Pcontent>
+                <Pcontent>
+                    <p>sitemapping</p>
+                    <p>content Writing</p>
+                </Pcontent>
+                <Pcontent>
+                    <p>web development</p>
+                    <p>e-commerce</p>
+                </Pcontent>
+                <Pcontent>
+                    <p>UI design</p>
+                    <p>Webflow</p>
+                </Pcontent>
+                <Pcontent>
+                    <p>database management</p>
+                    <p>graphic design</p>
+                </Pcontent>
+                <Pcontent>
+                    <p>graphic design</p>
+                    <p>logo & brand creation</p>
+                </Pcontent>
+                
+                <Link to='/contact'><button>get quote</button></Link>
+            </TextContnent>
+            </InnerContainer>
         </SliderContainer>
     )
 }
@@ -91,7 +122,7 @@ const HeroButtons = styled.div`
     button {
     border-style: none;  
     background-color: transparent;
-    color: rgb(251, 218, 79);
+    color: white;
 
     :hover {
             transform: translateY(-3px) scale(1.2);
@@ -103,24 +134,7 @@ const HeroButtons = styled.div`
     }
 `
 
-const Logo = styled.div`
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    z-index: 1;
-    color: white;
 
-    img {
-        margin: 20px;
-        width: 200px;
-        z-index: 1;
-
-        @media only screen and (max-width: 1200px) {
-            display: none;
-        }
-    }
-`
 
 const Title = styled.div`
     font-size: 40px;
@@ -128,6 +142,7 @@ const Title = styled.div`
     text-transform: uppercase;
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.637);
     margin-bottom: 0.8rem;
+ 
 
 @media only screen and (max-width: 1200px) {
   
@@ -137,10 +152,77 @@ const Title = styled.div`
 
 `
 
-const SliderContainer = styled.div`
-    padding-top: 200px;
+const InnerContainer = styled.div`
+    width: 100%;
+    padding: 40px;
+    background-color: rgb(122, 142, 142);
+    border-style: solid;
+    border-width: 1px;
+    display: grid;
+    grid-template-columns: repeat(2, 50% );
+    align-items: center;
+    justify-items: center; 
 
     @media only screen and (max-width: 1200px) {
-      padding-top: 100px;
+        padding: 0px;
+        display: block;
+        padding-top: 20px;
+    }
+`
+
+const TextContnent = styled.div`
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    align-items: center;
+    justify-items: center; 
+    color: white;
+
+    h1 {
+        font-family: "Roseritta";
+    }
+
+    button {
+        margin: 10px;
+        border-style: solid;
+        border-color: white;
+        border-width: 1px;
+        background-color: transparent;
+        color: white;
+        padding: 5px 20px;
+        text-transform: uppercase;
+    }
+`
+
+const Pcontent = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    justify-items: center; 
+    margin: 10px 0px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+   p {
+       margin: 0px 20px;
+
+       @media only screen and (max-width: 1200px) {
+        padding: 10px;
+    }
+   }
+
+   @media only screen and (max-width: 1200px) {
+        font-size: 12px;
+        display: block;
+        text-align: center;
+    }
+`
+
+const SliderContainer = styled.div`
+    padding: 200px;
+
+
+    @media only screen and (max-width: 1200px) {
+      padding: 100px 0px 0px 0px;    
+      width: 100vw;
     }
 `

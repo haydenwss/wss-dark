@@ -92,7 +92,7 @@ const WhatWeDo = () => {
 export default WhatWeDo
 
 const BoxContainer = styled.div`
-    background-color: rgb(32, 32, 32);
+    background-color: white;
     display: grid;
     grid-template-columns: repeat(4, auto);
     align-items: center;
@@ -109,9 +109,9 @@ const BoxContainer = styled.div`
 const CellGroup = styled.div`
     width: 300px;
     height: 400px;
-    background-color: #fbda4f;
+    background-color: rgb(122, 142, 142);
     color: rgb(32, 32, 32);
-    border-radius: 20px;
+    /* border-radius: 20px; */
    text-align: center;
    padding: 80px 10px 0px 10px;
 

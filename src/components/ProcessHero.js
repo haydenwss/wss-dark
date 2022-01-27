@@ -30,7 +30,7 @@ const ProcessHero = () => {
     return (
         <ProcessHeroContainer>
             <ProcessHeroGroup>
-                <img src='/images/WSS.png' alt='ProcessHero logo' />
+                <img src='/images/inverse-new-logo.png' alt='ProcessHero logo' />
                 <motion.div
                      initial="initial"
                      animate="in"
@@ -50,8 +50,7 @@ const ProcessHero = () => {
 export default ProcessHero
 
 const ProcessHeroContainer = styled.div`
-    background-color: rgb(32, 32, 32);
-    color: rgb(251, 218, 79);
+    color: black;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -70,6 +69,7 @@ const SubHeader = styled.div`
     text-align: center;
     align-items: center;
     justify-items: center; 
+    font-family: "Roseritta";
 
     @media only screen and (max-width: 1200px) {
       display: inline-block;
@@ -88,13 +88,13 @@ const ProcessHeroGroup = styled.div`
 
         @media only screen and (max-width: 1200px) {
             display: inline-block;
-            width: 80%;
+            width: 50%;
             height: auto;
         }
     }
     
     h1 {
-        color: white;
+        color: black;
         font-size: 80px;
         font-weight: 900;
         line-height: 1.5;
